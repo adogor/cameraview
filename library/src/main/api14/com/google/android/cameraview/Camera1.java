@@ -512,6 +512,7 @@ class Camera1 extends CameraViewImpl implements MediaRecorder.OnInfoListener,
         mCameraParameters.setPreviewSize(size.getWidth(), size.getHeight());
         mCameraParameters.setPictureSize(pictureSize.getWidth(), pictureSize.getHeight());
         mCameraParameters.setRotation(calcCameraRotation(mDisplayOrientation));
+        mCameraParameters.setRecordingHint(true);
         setAutoFocusInternal(mAutoFocus);
         setFlashInternal(mFlash);
         setAspectRatio(mAspectRatio);

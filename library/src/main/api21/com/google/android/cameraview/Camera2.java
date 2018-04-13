@@ -715,7 +715,7 @@ class Camera2 extends CameraViewImpl implements MediaRecorder.OnInfoListener, Me
         mPreview.setBufferSize(previewSize.getWidth(), previewSize.getHeight());
         Surface surface = getPreviewSurface();
         try {
-            mPreviewRequestBuilder = mCamera.createCaptureRequest(CameraDevice.TEMPLATE_PREVIEW);
+            mPreviewRequestBuilder = mCamera.createCaptureRequest(CameraDevice.TEMPLATE_RECORD);
             mPreviewRequestBuilder.addTarget(surface);
 
             if (mIsScanning) {
